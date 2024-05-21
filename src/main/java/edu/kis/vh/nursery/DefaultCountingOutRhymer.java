@@ -5,10 +5,13 @@ public class DefaultCountingOutRhymer {
 
     public static final int ARRAY_SIZE = 12;
     public static final int ERROR_RESPONSE = -1;
-    public static final int LAST_ARRAY_INDEX = 11;
+
+    public static final int DEFAULT_VALUE = -1;
+
+    public static final int LAST_ARRAY_INDEX = ARRAY_SIZE - 1;
     private final int[] numbers = new int[ARRAY_SIZE];
 
-    public int total = ERROR_RESPONSE;
+    public int total = DEFAULT_VALUE;
 
     public void countIn(int in) {
         if (!isFull())
@@ -16,7 +19,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == ERROR_RESPONSE;
+        return total == DEFAULT_VALUE;
     }
 
     public boolean isFull() {
