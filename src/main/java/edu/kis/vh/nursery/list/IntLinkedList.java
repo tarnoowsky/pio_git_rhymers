@@ -4,6 +4,7 @@ public class IntLinkedList {
 
     private static final int ERROR_RESPONSE = -1;
     private Node last;
+    // TODO: Remove or utilize the unused 'i' field
     private int i;
 
     public void push(int i) {
